@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +10,9 @@
 	<link rel="icon" type="image/x-icon" href="./images/waypoint_32x32.png">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	
 
 </head>
@@ -97,9 +101,13 @@
             	</div>      
 					
 					<div class="col-md-9" id="map-div">
+							
+					
+			 			<div id="map" style="width: 640px; height: 480px;"></div>
+			  				
 
 					<!-- map -->
-						<img src="./images/map_placeholder.png" alt="map" style="width:800px;height:auto;" id="map">
+						<!-- <img src="./images/map_placeholder.png" alt="map" style="width:800px;height:auto;" id="map"> -->
 
 					</div>
 					
@@ -165,9 +173,11 @@
 				
 
 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts"></script>
+	<script type="text/javascript" src="script.js"></script>
 
-	<script type="text/javascript" src="./script.js"></script>
 	
 	</body>
 
 </html> 
+
