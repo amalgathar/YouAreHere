@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>You Are Here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="./images/waypoint_32x32.png">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+    <body>
+        <div class="container">
+        <!-- side navbar -->
+        <!-- header/title -->
+            <div class="row" id="header">
+                <div class="col-md-12">
+                <div class="col-md-6" id="main-title">
+                    <h1>you are here<img src="./images/waypoint_wikipedia_512x512.png" id="waypoint-icon"></h1>
+                </div>
+                <!-- <div class="col-md-6" id="instructions-div">
+                    <h5>Put in an address. Put in a latitude & longitude. Maybe? We don't know yet. Here are some more instructions on how to use this amazing and wonderful informational map.</h5>
+                    
+                </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" id="search-div">
+                <!-- search bars -->
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" id = "searchTerm" placeholder="Search..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" id = "search" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search Buildings..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search Events..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search Time Period..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search Natural Landmarks..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search for Something..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search for Something Else..." aria-label="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-dark" type="button">GO!</button>
+                            </span>
+                    </div>
+                </div>      
+                    
+                    <div class="col-md-9" id="map-div">
+                            
+                    
+                        <div id="map" style="width: 640px; height: 480px;"></div>
+                            
+                    <!-- map -->
+                        <!-- <img src="./images/map_placeholder.png" alt="map" style="width:800px;height:auto;" id="map"> -->
+                    </div>
+                    
+            </div>
+            <div class="row">
+            <!-- location info box -->
+                <div class="col-md-12 info-box">
+                    <h2 class="content-title" id="location-title">Location Title</h2>
+                    <p class="location-content">
+                    <p>Cat ipsum dolor sit amet, jump off balcony, onto stranger's head or licks paws. Find empty spot in cupboard and sleep all day proudly pee in human's bed until he cleans the litter box meow eat half my food and ask for more, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff make meme, make cute face. Russian blue that box? i can fit in that box for relentlessly pursues moth poop on grasses but attack feet, and stand in front of the computer screen, or kitty power. Head nudges rub face on everything run in circles, or sit and stare, for meow all night. Purr cat fur is the new black for spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce scratch the furniture or i can haz. Russian blue mesmerizing birds or eat half my food and ask for more i could pee on this if i had the energy so spit up on light gray carpet instead of adjacent linoleum. Stretch leave hair everywhere, or please stop looking at your phone and pet me so freak human out make funny noise mow mow mow mow mow mow success now attack human but sleep on dog bed, force dog to sleep on floor. 
+                    <p>Chirp at birds brown cats with pink ears. The dog smells bad howl on top of tall thing so try to jump onto window and fall while scratching at wall. Cat snacks. Scratch at fleas, meow until belly rubs, hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food intently stare at the same spot. Eat a plant, kill a hand meowing non stop for food, or ask to go outside and ask to come inside and ask to go outside and ask to come inside yet sleep nap purr, jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans wake up human for food at 4am.</p>
+                    <p>Claw drapes immediately regret falling into bathtub stretch, but unwrap toilet paper. Leave hair everywhere cats are fats i like to pets them they like to meow back. Knock dish off table head butt cant eat out of my own dish sit and stare meowzer, or jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans yet pose purrfectly to show my beauty claw at curtains stretch and yawn nibble on tuna ignore human bite human hand. Vommit food and eat it again leave fur on owners clothes scratch at the door then walk away for eat and than sleep on your face. Purrr purr littel cat, little cat purr purr stick butt in face kitty power hiding behind the couch until lured out by a feathery toy for soft kitty warm kitty little ball of furr annoy kitten brother with poking.</p>
+                    <p>Cat not kitten around sit in box and bathe private parts with tongue then lick owner's face instantly break out into full speed gallop across the house for no reason. That box? i can fit in that box poop in litter box, scratch the walls dont wait for the storm to pass, dance in the rain but eat the fat cats food yet rub face on owner. Lick arm hair roll over and sun my belly plays league of legends. Pounce on unsuspecting person lick the curtain just to be annoying. Mark territory love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater) so head nudges . Hate dog bleghbleghvomit my furball really tie the room together sit in box. I'm going to lap some water out of my master's cup meow drool. Stare out the window chase after silly colored fish toys around the house cough furball chase laser.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+            <!-- history info box; actual wiki page linked? -->
+                <div class="col-md-12 info-box">
+                    <h2 class="content-title" id="history-title">History Title</h2>
+                    <img src="./images/wiki-page.jpg" alt="wiki page" style="width:100%;height:auto;" id="history-content">
+                </div>
+            </div>
+            <!-- relevant wiki pages? -->
+            <div class="row">
+                <div class="col-md-12" id="footer">
+                    <h5>&copy; 2017 | 
+                    <!-- links to personal githubs or wherever -->
+                        <a class="personal-link" href="" target="_blank">Chris Berry</a> | 
+                        <a class="personal-link" href="https://github.com/ashdonnelly" target="_blank">Ashley Donnelly</a> | 
+                        <a class="personal-link" href="https://github.com/amalgathar" target="_blank">Zach Johnson</a> | 
+                        <a class="personal-link" href="https://github.com/JamesTown-625" target="_blank">James Teerlink</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+                
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
+    </body>
+</html> 
