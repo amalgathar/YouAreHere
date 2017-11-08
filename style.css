@@ -4,19 +4,23 @@
 }
 
 body {
-	background-image: url("./images/connect.png");
+	background-color:#2b3e50;
 	font-family: 'Open Sans', sans-serif;
 }
 
 #header {
 	font-family: 'Nunito', sans-serif;
-	color: #303030;
+	color: white;
 	/*background-color: white;*/
 	/*box-shadow: 0 0 20px white;*/
 	/*border-radius: 8px;*/
 	padding: 0px;
 	margin: 8px;
 	font-size: 80px;
+}
+
+.panel-body, .panel-heading, .panel-title {
+	color: white;
 }
 
 #main-title {
