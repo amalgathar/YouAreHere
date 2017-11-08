@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +29,7 @@
 
 				<div class="col-md-6" id="main-title">
 
-					<h1>you are here<img src="./images/waypoint_wikipedia_512x512.png" id="waypoint-icon"></h1>
+					<h1>you are here    <img src="./images/waypoint_wikipedia_512x512.png" id="waypoint-icon"></h1>
 
 				</div>
 
@@ -45,32 +44,54 @@
 			</div>
 
 			<div class="row">
+				
+					<div class="col-md-9" id="map-div">
 
-				    <div class="col-md-9" id="map-div">
-							
-						<input id="pac-input" style="width: 400px; z-index: 1; position: absolute; left: 150px; top: 20px;" class="controls" type="text" placeholder="Search Box">
-			 			<div id="map" style="width: 800px; height: 500px; z-index: 0;"></div>
-			  		
-			  		</div>
+						<!-- <input id="searchTerm" style="width: 400px; z-index: 1; position: absolute; left: 150px; top: 20px;" class="controls" type="text" placeholder="Search Box">
+ -->
+							<div class="input-group search-bar" style="z-index: 0;">
+      					<input type="text" class="form-control" id = "searchTerm" placeholder="Search..." aria-label="Search for...">
+      						<span class="input-group-btn">
+        						<button class="btn btn-dark" id = "search" type="button">GO!</button>
+    						</span>
+    				</div>
 
-			  		<div class="col-md-3" id="facts-div">
 
-							    <div class="panel panel-primary">
+
+
+
+			 			<div id="map" style="width: 800px; height: 480px; z-index: 1;"></div>
+			  				
+
+					<!-- map -->
+						<!-- <img src="./images/map_placeholder.png" alt="map" style="width:800px;height:auto;" id="map"> -->
+
+					</div>
+
+					<div class="col-md-3" id="fact-div"> 
+						<div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Location Facts</h3>
+                    <h3 class="panel-title">Did you know?</h3>
                 </div>
                 <div class="panel-body">
                     <div class="well">
-                        <h4>+ Fact 1</h4>
-                        <h4>+ Fact 2</h4>
-                        <h4>+ Fact 3</h4>
-                        <h4>+ Fact 4</h4>
+                        <h4>+ blah blah blah</h4>
+                      
                     </div>
+                    
+                   
+
+
+
             </div>
         </div>
-    </div>
-</div>
-						
+					</div>
+
+
+					
+			</div>
+				
+			
 			<div class="row">
 
 			<!-- history info box; actual wiki page linked? -->
@@ -110,11 +131,14 @@
 		</div>
 				
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts&libraries=places"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="wiki.js"></script>
 
 	
 	</body>
 
 </html> 
+
 
