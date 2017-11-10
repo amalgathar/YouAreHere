@@ -4,8 +4,9 @@
 }
 
 body {
-	background-color:#2b3e50;
+	background-image: url("images/tileable-starfield-patterns-3.JPG");
 	font-family: 'Open Sans', sans-serif;
+	/*text-shadow: 2px 2px #ff0000;*/
 }
 
 #header {
@@ -19,8 +20,18 @@ body {
 	font-size: 80px;
 }
 
+h1, h2, h3{
+	text-shadow: 2px 2px #ff0000;
+	font-family: 'Righteous', cursive;
+}
+
+#searchTerm #search {
+	box-shadow: 10px 10px 5px #888888;
+}
+
 .panel-body, .panel-heading, .panel-title {
 	color: white;
+	text-align: center;
 }
 
 #main-title {
@@ -50,13 +61,14 @@ body {
 .search-bar {
 	margin: 8px;
 	margin-bottom: 20px;
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Righteous', cursive;
 }
 
 #map {
 	margin: 8px;
 	border: 1px solid lightgray;
 	border-radius: 8px;
+	box-shadow: 10px 10px 5px black;
 }
 
 .info-box {
@@ -72,13 +84,13 @@ body {
 
 .content-title {
 	color: #303030;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Righteous', cursive;
 }
 
 #footer {
 	color: darkgray;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Righteous', cursive;
     background-color: white;
     border-radius: 8px;
     padding-top: 10px;
@@ -93,4 +105,43 @@ a {
 a:hover {
 	text-decoration: none;
 	color: #303030;
+}
+
+#factReturn{
+	height: 480px;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 8px;
+	border: 1px solid lightgray;
+	margin-top: 35px;
+	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
+	color: white;
+	margin-left: 2px;
+}
+.form-control{
+	box-shadow: 10px 10px 5px black;
+	border-radius: 8px;
+	border: 1px solid lightgray;
+}#history-title{
+	box-shadow: 10px 10px 5px black;
+	border-radius: 8px;
+	border: 1px solid lightgray;
+}
+#footer{
+	box-shadow: 10px 10px 5px black;
+	border-radius: 8px;
+	border: 1px solid lightgray;
+	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
+}
+
+#urlReturn {
+	box-shadow: 10px 10px 5px black;
+	border-radius: 8px;
+	border: 1px solid lightgray;	
+	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
+}
+#links {
+
+	font-size: 24px;
+	color: red;
+
 }

@@ -6,6 +6,7 @@
 	<title>You Are Here</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous|Rozha+One" rel="stylesheet"> 
 	<link rel="icon" type="image/x-icon" href="./images/waypoint_32x32.png">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito" rel="stylesheet">
@@ -27,10 +28,10 @@
 
 				<div class="col-md-12">
 
-				<div class="col-md-6" id="main-title">
+				<div class="col-md-12" id="main-title">
 
-					<h1>you are here    <img src="./images/waypoint_wikipedia_512x512.png" id="waypoint-icon"></h1>
-
+					<h1>wiki where you are   <img src="./images/waypoint_wikipedia_glow.jpg" id="waypoint-icon"> random facts</h1>
+					
 				</div>
 
 				<!-- <div class="col-md-6" id="instructions-div">
@@ -71,11 +72,11 @@
 					<div class="col-md-3" id="fact-div"> 
 						<div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Did you know?</h3>
+                    <h2 class="panel-title">Did you know?</h2>
                 </div>
-                <div class="panel-body">
+                <div class="form-group" id = "factReturn">
                     <div class="well">
-                        <h4>+ blah blah blah</h4>
+                        <h4 style = "text-align: center"> Facts</h4>
                       
                     </div>
                     
@@ -95,11 +96,15 @@
 			<div class="row">
 
 			<!-- history info box; actual wiki page linked? -->
-				<div class="col-md-12 info-box">
+				<div class="col-md-12 info-box" id = urlReturn>
 
-					<h2 class="content-title" id="history-title">History Title</h2>
-
-					<img src="./images/wiki-page.jpg" alt="wiki page" style="width:100%;height:auto;" id="history-content">
+					<h2 class="content-title" id="history-title">Want the full story? Wiki Links Below</h2>
+					<div id = "linkDiv">
+						
+						<img src="./images/seamless-pattern-set-deep-water-blues-9.jpg" alt="wiki page" style="width:100%;height:auto;">
+						<a href = "links">
+						</a>	
+					</div>
 
 				</div>
 
@@ -114,7 +119,7 @@
 					<h5>&copy; 2017 | 
 
 					<!-- links to personal githubs or wherever -->
-						<a class="personal-link" href="" target="_blank">Chris Berry</a> | 
+						<a class="personal-link" href="https://github.com/desertrockclimber" target="_blank">Chris Berry</a> | 
 
 						<a class="personal-link" href="https://github.com/ashdonnelly" target="_blank">Ashley Donnelly</a> | 
 
@@ -134,7 +139,7 @@
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts"></script>
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="wiki.js"></script>
+	
 
 	
 	</body>
