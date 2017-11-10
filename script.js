@@ -1,40 +1,47 @@
 var apiKey = 'key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts';
-  // var searchTerm = $("#searchTerm").val();
-  var mapSearch;
-  var addressSearch = "Salt Lake City";
-  var map;
-  var LatLng = (40.7774, 111.8882);
-  var placeId = " ";
- // $.ajax({
- //      url: queryURL,
- //      method: 'GET'
- //    }).done(function(response) {
- //      console.log(response);
- //      var lat = response.results[0].geometry.location.lat;
- //      var lng = response.results[0].geometry.location.lng;
- //      var coordinates = {lat: lat , lng: lng};
- //      map = new google.maps.Map(document.getElementById('map'), {
- //          center: coordinates,
- //          zoom: 13
- //        });
- //    });
+  
 
+ var config = {
+    apiKey: "AIzaSyDGFy-pK3aErYV8Op5piaSHJOAwKyt0mms",
+    authDomain: "youarehere-9043a.firebaseapp.com",
+    databaseURL: "https://youarehere-9043a.firebaseio.com",
+    projectId: "youarehere-9043a",
+    storageBucket: "youarehere-9043a.appspot.com",
+    messagingSenderId: "520576088730"
+  };
 
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+  
 // =========== FUNCTIONS ==========================================================
 
-  var geocoder;
-  var map;
   function initialize() {
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(40.7774, 111.8882);
-    var mapOptions = {
-      zoom: 8,
-      center: latlng
-    }
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  }
- 
-$("#search").on("click", function() {
+    
+    var origin = {lat: 40.7774, lng: -111.8882};
+    var intialMap = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: origin
+    });
+  };
+  
+  // ==================================== Saving Firebase Input ============================================================
+
+  $("#search").on("click", function(event) {
+  event.preventDefault();
+
+  // Grabs user inputs
+  var travelLog = $("#searchTerm").val().trim();
+
+  // Creates local "temporary" object for holding data
+  var newDestination = {
+    location: travelLog,
+  };
+
+  database.ref().push(newDestination);
+
+ // ==================================== Saving Firebase Input ============================================================
+
   var searchTerm = $("#searchTerm").val();
   mapSearch = searchTerm;
   console.log(searchTerm);
@@ -66,6 +73,8 @@ $("#search").on("click", function() {
             zoom: 13
             // console.log(data[3])
 
+
+        // $("#factReturn").text(data[2]); 
         // $("#factReturn").text(data[2]);    
           });
 
@@ -78,70 +87,16 @@ $("#search").on("click", function() {
   })
 })
 
-
-
-
-
-
 // =========== FUNCTIONS ==========================================================
 
-// var input = document.getElementById('pac-input');
-//         var searchBox = new google.maps.places.SearchBox(input);
-//         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-//         // Bias the SearchBox results towards current map's viewport.
-//         map.addListener('bounds_changed', function() {
-//            searchBox.setBounds(map.getBounds());
-//          });
-
-        // var markers = [];
-        // // Listen for the event fired when the user selects a prediction and retrieve
-        // // more details for that place.
-        // searchBox.addListener('places_changed', function() {
-        //   var places = searchBox.getPlaces();
-
-        //   if (places.length == 0) {
-        //     return;
-        //   }
-
-          // // Clear out the old markers.
-          // markers.forEach(function(marker) {
-          //   marker.setMap(null);
-          // });
-
-  //         markers = [];
-  //          // For each place, get the icon, name and location.
-  //         var bounds = new google.maps.LatLngBounds();
-  //         places.forEach(function(place) {
-  //           if (!place.geometry) {
-  //             console.log("Returned place contains no geometry");
-  //             return;
-  //           }
-  //           var icon = {
-  //             url: place.icon,
-  //             size: new google.maps.Size(71, 71),
-  //             origin: new google.maps.Point(0, 0),
-  //             anchor: new google.maps.Point(17, 34),
-  //             scaledSize: new google.maps.Size(35, 35)
-  //           };
-
-  //           // Create a marker for each place.
-  //           markers.push(new google.maps.Marker({
-  //             map: map,
-  //             icon: icon,
-  //             title: place.name,
-  //             position: place.geometry.location
-  //           }));
-
-  //                if (place.geometry.viewport) {
-  //             // Only geocodes have viewport.
-  //             bounds.union(place.geometry.viewport);
-  //           } else {
-  //             bounds.extend(place.geometry.location);
-  //           }
-  //         });
-  //         map.fitBounds(bounds);
-  //       });
-  //   });
-  // });
-
+    function initMap() {
+        var sandyCampus = {lat: 40.569790, lng: -111.894628};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: sandyCampus
+        });
+        var marker = new google.maps.Marker({
+          position: sandyCampus,
+          map: map
+        });
+      }
