@@ -39,7 +39,7 @@ $("#search").on("click", function() {
   mapSearch = searchTerm;
   console.log(searchTerm);
   var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm + "&format=json&callback=?";
-
+  jQuery('#links').text('');
   $.ajax({
     url: url,
     type:"GET",
@@ -53,8 +53,27 @@ $("#search").on("click", function() {
       method: 'GET'
       }).done(function(response) {
         console.log(response);
+        // $('#factReturn').text(JSON.stringify(data[3]));
         $("#factReturn").text(data[2][0]);
-        $("#links").text(data[3][0]);
+        // $('#links').text(data[3]);
+        $("#links").wrap(function() {
+       
+       for (i = 0; i < data[3].length; i++) {
+        console.log(data[3][i]);
+
+      
+        var div = $("<div>");
+        var a = $("<a>");
+      // var link = $('<div><a/>');
+         a.attr('href', (data[3][i]));
+         a.text(data[3][i]);
+         div.append(a);
+       
+       $("#links").append(div);
+        }
+        });
+        
+       
         console.log(data[2][0]);
         console.log(data[3][0]);
         var lat = response.results[0].geometry.location.lat;
@@ -63,9 +82,10 @@ $("#search").on("click", function() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: coordinates,
             zoom: 13
-            // console.log(data[3])
+        
+      
 
-        // $("#factReturn").text(data[2]);    
+
           });
     });
     }
