@@ -53,6 +53,7 @@ $("#search").on("click", function() {
       method: 'GET'
       }).done(function(response) {
         console.log(response);
+
         // $('#factReturn').text(JSON.stringify(data[3]));
         $("#factReturn").text(data[2][0]);
         // $('#links').text(data[3]);
@@ -74,6 +75,11 @@ $("#search").on("click", function() {
         });
         
        
+
+        // var randomNumber = Math.floor(Math.random() * 10);
+        // $("#factReturn").text(data[2][randomNumber]);
+        // $("#links").text(data[3][0]);
+
         console.log(data[2][0]);
         console.log(data[3][0]);
         var lat = response.results[0].geometry.location.lat;
@@ -87,10 +93,17 @@ $("#search").on("click", function() {
 
 
           });
-    });
+
+      })
+        $("#randomFactBtn").on("click", function() {
+        var randomNumber = Math.floor(Math.random() * 10);
+        $("#factReturn").text(data[2][randomNumber]);
+      });
     }
   })
 })
+
+
 
 
 
