@@ -53,17 +53,28 @@ $("#search").on("click", function() {
       method: 'GET'
       }).done(function(response) {
         console.log(response);
+        $("#factReturn").text(data[2][0]);
+        $("#links").text(data[3][0]);
+        console.log(data[2][0]);
+        console.log(data[3][0]);
         var lat = response.results[0].geometry.location.lat;
         var lng = response.results[0].geometry.location.lng;
         var coordinates = {lat: lat , lng: lng};
         map = new google.maps.Map(document.getElementById('map'), {
             center: coordinates,
             zoom: 13
+            // console.log(data[3])
+
+        // $("#factReturn").text(data[2]);    
           });
     });
     }
   })
 })
+
+
+
+
 // =========== FUNCTIONS ==========================================================
 
 // var input = document.getElementById('pac-input');
