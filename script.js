@@ -60,7 +60,8 @@ var apiKey = 'key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts';
       method: 'GET'
       }).done(function(response) {
         console.log(response);
-        $("#factReturn").text(data[2][0]);
+        var randomNumber = Math.floor(Math.random() * 10);
+        $("#factReturn").text(data[2][randomNumber]);
         $("#links").text(data[3][0]);
         console.log(data[2][0]);
         console.log(data[3][0]);
@@ -72,14 +73,19 @@ var apiKey = 'key=AIzaSyAB6pgrU8w2KcZEpSwlRmldkyCIxrBl0ts';
             zoom: 13
             // console.log(data[3])
 
+
         // $("#factReturn").text(data[2]); 
+        // $("#factReturn").text(data[2]);    
+          });
 
-
-        });
+      })
+        $("#randomFactBtn").on("click", function() {
+        var randomNumber = Math.floor(Math.random() * 10);
+        $("#factReturn").text(data[2][randomNumber]);
       });
     }
-  });
-});
+  })
+})
 
 // =========== FUNCTIONS ==========================================================
 
