@@ -3,11 +3,11 @@
 
 <head>
 
-	<title>You Are Here</title>
+	<title>WikiFact Map</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Righteous|Rozha+One" rel="stylesheet"> 
-	<link rel="icon" type="image/x-icon" href="./images/waypoint_32x32.png">
+	<link rel="icon" type="image/x-icon" href="./images/flat_gray_marker_32x32.png">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Nunito" rel="stylesheet">
 
@@ -32,7 +32,7 @@
 
 				<div class="col-md-12" id="main-title">
 
-					<h1>wiki where you are   <img src="./images/waypoint_wikipedia_glow.jpg" id="waypoint-icon"> random facts</h1>
+					<h1 id="title">WikiFact<img src="./images/flat_gray_marker.png" id="waypoint-icon">Map</h1>
 					
 				</div>
 
@@ -53,17 +53,17 @@
 						<!-- <input id="searchTerm" style="width: 400px; z-index: 1; position: absolute; left: 150px; top: 20px;" class="controls" type="text" placeholder="Search Box">
  -->
 							<div class="input-group search-bar" style="z-index: 0;">
-      					<input type="text" class="form-control" id = "searchTerm" placeholder="Search..." aria-label="Search for...">
-      						<span class="input-group-btn">
-        						<button class="btn btn-dark" id = "search" type="button">GO!</button>
-    						</span>
+      							<input type="text" class="form-control" id = "searchTerm" placeholder="Search..." aria-label="Search for...">
+      							<span class="input-group-btn">
+        								<button class="btn btn-primary" id = "search" type="button">GO!</button>
+    							</span>
     				</div>
 
 
 
 
 
-			 			<div id="map" style="width: 800px; height: 480px; z-index: 1;"></div>
+			 			<div id="map" style="z-index: 1;"></div>
 			  				
 
 					<!-- map -->
@@ -71,23 +71,23 @@
 
 					</div>
 
-					<div class="col-md-3" id="fact-div"> 
+					<div class="col-md-3">
+
 						<div class="panel panel-primary">
-                <div class="panel-heading">
-                	<div class="btn btn-info">
-                    	<h2 class="panel-title" id="randomFactBtn">Random fact?</h2>
-                    </div>
-                </div>
-                <div class="form-group" id = "factReturn">
-                    <div class="well">
-                        <h4 style = "text-align: center"> Facts</h4>
-                    </div>                    
-                   
 
+           				    <div class="panel-heading">
+                				<div class="btn btn-sm btn-primary">
+                    					<h2 class="panel-title" id="randomFactBtn">Click for Facts!</h2>
+                    			</div>
+                			</div>
 
+	               			<div class="form-group" id = "factReturn">
+	                    		<div class="well">
+	                        		<h4 style = "text-align: center">Facts:</h4>
+	                    		</div>                    
+	            			</div>
 
-            </div>
-        </div>
+        				</div>
 					</div>
 
 
@@ -98,7 +98,7 @@
 			<div class="row">
 
 			<!-- history info box; actual wiki page linked? -->
-				<div class="col-md-12 info-box" id = urlReturn>
+				<div class="col-md-12 info-box" id = "urlReturn">
 
 					<h2 class="content-title" id="history-title">Want the full story? Wiki Links Below</h2>
 					<div id = "links">

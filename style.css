@@ -10,23 +10,18 @@ body {
 }
 
 #header {
-	font-family: 'Nunito', sans-serif;
+	/*font-family: 'Nunito', sans-serif;*/
 	color: white;
-	/*background-color: white;*/
-	/*box-shadow: 0 0 20px white;*/
-	/*border-radius: 8px;*/
-	padding: 0px;
-	margin: 8px;
-	font-size: 80px;
+	padding: 8px;
+/*	margin: 8px;
+	font-size: 0px;*/
+	min-width: 800px;
 }
 
-h1, h2, h3{
-	text-shadow: 2px 2px #ff0000;
+h1, h2, h3 {
+	/*text-shadow: 2px 2px #ff0000;*/
+	color: white;
 	font-family: 'Righteous', cursive;
-}
-
-#searchTerm #search {
-	box-shadow: 10px 10px 5px #888888;
 }
 
 .panel-body, .panel-heading, .panel-title {
@@ -36,18 +31,12 @@ h1, h2, h3{
 
 #main-title {
 	text-align: left;
-}
-
-#instructions-div {
-	text-align: right;
-}
-
-#main-title {
 	margin-top: 20px;
 	margin-right: 80px;
 	padding-right: 120px;
 	position: relative;
 	bottom: -30px;
+	letter-spacing: 3px;
 }
 
 #waypoint-icon {
@@ -65,15 +54,17 @@ h1, h2, h3{
 }
 
 #map {
+	width: 800px;
+	height: 480px; 
 	margin: 8px;
 	border: 1px solid lightgray;
 	border-radius: 8px;
-	box-shadow: 10px 10px 5px black;
+	/*box-shadow: 10px 10px 5px black;*/
 }
 
 .info-box {
 	width: fill;
-	height: 400px;
+	height: 300px;
 	overflow: auto;
 	background-color: white;
 	border: 1px solid lightgray;
@@ -83,8 +74,9 @@ h1, h2, h3{
 }
 
 .content-title {
-	color: #303030;
+	color: white;
     font-family: 'Righteous', cursive;
+    font-size: 24px;
 }
 
 #footer {
@@ -99,50 +91,70 @@ h1, h2, h3{
 
 a {
 	text-decoration: none;
-	color: darkgray;
+	color: white;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #303030;
+	color: darkgray;
 }
 
 #factReturn{
-	height: 480px;
-	box-shadow: 10px 10px 5px black;
+	height: 450px;
+	/*box-shadow: 10px 10px 5px black;*/
 	border-radius: 8px;
 	border: 1px solid lightgray;
 	margin-top: 35px;
-	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
-	color: white;
+	background-color: white;
+	/*background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");*/
+	color: #284a9d;
 	margin-left: 2px;
+	line-height: 25px;
+	font-size: 16px;
 }
+
+#randomFactBtn {
+	padding: 3px;
+}
+
 .form-control{
-	box-shadow: 10px 10px 5px black;
-	border-radius: 8px;
-	border: 1px solid lightgray;
-}#history-title{
-	box-shadow: 10px 10px 5px black;
+	/*box-shadow: 10px 10px 5px black;*/
 	border-radius: 8px;
 	border: 1px solid lightgray;
 }
+
 #footer{
-	box-shadow: 10px 10px 5px black;
+	/*box-shadow: 10px 10px 5px black;*/
 	border-radius: 8px;
 	border: 1px solid lightgray;
-	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
+	background-color: #284a9d;
+	color: white;
+	/*background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");*/
 }
 
 #urlReturn {
-	box-shadow: 10px 10px 5px black;
+	/*box-shadow: 10px 10px 5px black;*/
 	border-radius: 8px;
-	border: 1px solid lightgray;	
-	background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");
-
+	border: 1px solid lightgray;
+	background-color: #284a9d;
+	color: white;
+	line-height: 25px;
+	font-size: 16px;
+	/*background-image: url("images/seamless-pattern-set-deep-water-blues-9.JPG");*/
 }
-#links {
 
+#links {
 	font-size: 24px;
 	color: red;
+}
 
+@media only screen and (max-width: 1208px) {
+
+	#mani-title {
+		width: 100%;
+	}
+
+	#map {
+		width: 100%;
+	}
 }
